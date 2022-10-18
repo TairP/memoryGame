@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.main {
+  border: rgb(196, 255, 235) dashed 2px;
+  padding: 25px;
+  height: 95vh;
+  flex-basis: 100%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title, button {
+  font-family: "Amatic SC", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgb(119, 206, 206);
+  text-align: center;
+  margin-top: 20px;
+}
+.cards-box {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.card {
+  border: #4b4b4b 2px solid;
+  flex-grow: 1;
+  margin: 20px;
+}
+.marked-card {
+  box-shadow: 0 10px 80px #888888;
+}
+.unmarked-card {
+  border: #4b4b4b 2px solid;
+}
+.picker-box {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.picker {
+  border: #4b4b4b 1px solid;
+  margin: 5px;
+  flex-grow: 1;
+  flex-basis: 165px;
+  cursor: pointer;
+}
+.gone {
+  display: none;
+}
+p {
+  margin-top: 80px;
+  font-family: "Amatic SC", cursive;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  width: 400px;
+  border: 1px dashed rgba(0, 0, 0, 0.158);
+  padding: 30px;
+}
+button {
+  margin-top: 100px;
+  background-color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 30px;
+  color: black;
+  transform-style: preserve-3d;
+  transform-origin: 20% 40%;
+  transition: text-shadow 300ms, color 300ms, transform 300ms ease-out;
+  animation: button 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  &:hover{
+    cursor: pointer;
+    background-color: azure;
+  } 
+}
+      @keyframes button {
+        0% {
+          box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+          transform: translateX(0) translateY(0);
+        }
+        100% {
+          box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+          transform: translateX(-8px) translateY(8px);
+        }
+      }
